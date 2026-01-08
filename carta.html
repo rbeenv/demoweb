@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carta del Bar El Refugio - Vinos, cócteles, cervezas y tapas de primera calidad">
+    <title>Nuestra Carta - Bar El Refugio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">El Refugio</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="carta.html" class="nav-link active">Carta</a></li>
+                <li><a href="reservas.html" class="nav-link">Reservas</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="carta-hero">
+        <div class="hero-content">
+            <h1>Nuestra Carta</h1>
+            <p>Descubre nuestra selección de bebidas premium y aperitivos gourmet</p>
+        </div>
+    </section>
+
+    <!-- PDF Viewer Section -->
+    <section class="pdf-viewer-container">
+        <div class="pdf-controls">
+            <a href="assets/carta.pdf" target="_blank" class="btn">Ver en pantalla completa</a>
+            <button onclick="downloadPDF()" class="btn btn-secondary">Descargar PDF</button>
+        </div>
+        
+        <div class="pdf-viewer">
+            <iframe src="assets/carta.pdf" type="application/pdf"></iframe>
+        </div>
+        
+        <div class="text-center mt-2">
+            <p style="color: var(--color-text-light); margin: 2rem 0;">
+                ¿Listo para disfrutar de nuestra selección?
+            </p>
+            <a href="reservas.html" class="btn">Reservar Mesa</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>El Refugio</h3>
+                <p>
+                    Un espacio donde la elegancia se encuentra con la tradición. 
+                    Tu refugio en el corazón de Madrid.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="index.html">Inicio</a></p>
+                <p><a href="carta.html">Nuestra Carta</a></p>
+                <p><a href="reservas.html">Reservas</a></p>
+                <p><a href="index.html#sobre-nosotros">Sobre Nosotros</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Calle Gran Vía, 42</p>
+                <p>28013 Madrid, España</p>
+                <p>Tel: +34 912 345 678</p>
+                <p>Email: info@elrefugiobar.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horarios</h3>
+                <p>Lun - Jue: 18:00 - 01:00</p>
+                <p>Vie - Sáb: 18:00 - 03:00</p>
+                <p>Domingo: 18:00 - 00:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bar El Refugio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserva tu mesa en Bar El Refugio - Sistema de reservas online">
+    <title>Reservas - Bar El Refugio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">El Refugio</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="carta.html" class="nav-link">Carta</a></li>
+                <li><a href="reservas.html" class="nav-link active">Reservas</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="reservas-hero">
+        <div class="hero-content">
+            <h1>Reserva tu Mesa</h1>
+            <p>Asegura tu lugar en El Refugio y disfruta de una experiencia inolvidable</p>
+        </div>
+    </section>
+
+    <!-- Reservation Form Section -->
+    <section class="form-container">
+        <form id="reservationForm" class="reservation-form">
+            <h2 class="text-center mb-2">Completa tu Reserva</h2>
+            <p class="text-center mb-2" style="color: var(--color-text-light);">
+                Todos los campos marcados con * son obligatorios
+            </p>
+
+            <div class="form-group">
+                <label for="nombre">Nombre Completo *</label>
+                <input 
+                    type="text" 
+                    id="nombre" 
+                    name="nombre" 
+                    placeholder="Tu nombre completo"
+                    required
+                >
+                <span class="error-message"></span>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="tu@email.com"
+                        required
+                    >
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input 
+                        type="tel" 
+                        id="telefono" 
+                        name="telefono" 
+                        placeholder="+34 600 000 000"
+                        required
+                    >
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fecha">Fecha de Reserva *</label>
+                    <input 
+                        type="date" 
+                        id="fecha" 
+                        name="fecha" 
+                        required
+                    >
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="hora">Hora *</label>
+                    <select id="hora" name="hora" required>
+                        <option value="">Selecciona una hora</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                        <option value="22:00">22:00</option>
+                        <option value="22:30">22:30</option>
+                        <option value="23:00">23:00</option>
+                        <option value="23:30">23:30</option>
+                        <option value="00:00">00:00</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="personas">Número de Personas *</label>
+                    <input 
+                        type="number" 
+                        id="personas" 
+                        name="personas" 
+                        min="1" 
+                        max="20" 
+                        placeholder="2"
+                        required
+                    >
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="ocasion">Ocasión Especial</label>
+                    <select id="ocasion" name="ocasion">
+                        <option value="">Ninguna en particular</option>
+                        <option value="cumpleanos">Cumpleaños</option>
+                        <option value="aniversario">Aniversario</option>
+                        <option value="negocios">Reunión de negocios</option>
+                        <option value="cita">Cita romántica</option>
+                        <option value="celebracion">Celebración especial</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comentarios">Comentarios Adicionales</label>
+                <textarea 
+                    id="comentarios" 
+                    name="comentarios" 
+                    placeholder="¿Alguna preferencia especial? (zona preferida, alergias, etc.)"
+                    rows="4"
+                ></textarea>
+                <span class="error-message"></span>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Confirmar Reserva</button>
+
+            <p class="text-center mt-2" style="color: var(--color-text-light); font-size: 0.9rem;">
+                Al enviar este formulario, aceptas nuestra política de privacidad y términos de uso.
+            </p>
+        </form>
+
+        <div id="successMessage" class="success-message"></div>
+    </section>
+
+    <!-- Additional Info Section -->
+    <section class="container">
+        <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-sm); max-width: 700px; margin: 0 auto;">
+            <h3 style="text-align: center; margin-bottom: 1.5rem;">Información Importante</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 0.8rem 0; border-bottom: 1px solid #e0e0e0;">
+                    ✓ Las reservas se confirman automáticamente por email
+                </li>
+                <li style="padding: 0.8rem 0; border-bottom: 1px solid #e0e0e0;">
+                    ✓ Tolerancia de 15 minutos para la llegada
+                </li>
+                <li style="padding: 0.8rem 0; border-bottom: 1px solid #e0e0e0;">
+                    ✓ Para grupos de más de 10 personas, contactar por teléfono
+                </li>
+                <li style="padding: 0.8rem 0; border-bottom: 1px solid #e0e0e0;">
+                    ✓ Política de cancelación: avisar con 24h de antelación
+                </li>
+                <li style="padding: 0.8rem 0;">
+                    ✓ ¿Preguntas? Llámanos al +34 912 345 678
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>El Refugio</h3>
+                <p>
+                    Un espacio donde la elegancia se encuentra con la tradición. 
+                    Tu refugio en el corazón de Madrid.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="index.html">Inicio</a></p>
+                <p><a href="carta.html">Nuestra Carta</a></p>
+                <p><a href="reservas.html">Reservas</a></p>
+                <p><a href="index.html#sobre-nosotros">Sobre Nosotros</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Calle Gran Vía, 42</p>
+                <p>28013 Madrid, España</p>
+                <p>Tel: +34 912 345 678</p>
+                <p>Email: info@elrefugiobar.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horarios</h3>
+                <p>Lun - Jue: 18:00 - 01:00</p>
+                <p>Vie - Sáb: 18:00 - 03:00</p>
+                <p>Domingo: 18:00 - 00:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bar El Refugio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
