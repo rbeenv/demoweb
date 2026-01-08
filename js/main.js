@@ -212,8 +212,8 @@ function submitReservation() {
         comentarios: document.getElementById('comentarios').value
     };
 
-    // Simulate API call
-    console.log('Reservation data:', formData);
+    // In a real application, this would send data to a server
+    // Example: fetch('/api/reservations', { method: 'POST', body: JSON.stringify(formData) })
 
     // Show success message
     form.style.display = 'none';
@@ -286,6 +286,7 @@ function observeElements() {
 }
 
 // Initialize animations if on home page
-if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
+const pathname = window.location.pathname;
+if (pathname.includes('index.html') || pathname === '/' || pathname.endsWith('/')) {
     document.addEventListener('DOMContentLoaded', observeElements);
 }
